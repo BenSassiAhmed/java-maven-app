@@ -49,7 +49,10 @@ pipeline {
         stage("deploy") {
             steps {
                 script {
-                    gv.deployApp()
+                    sh 'kubectl get nodes '
+                    sh 'kubectl create -f deployementservice.yml'
+                    sh 'sleep 10'
+                    sh 'kubectl get all '
                 }
             }
         }
