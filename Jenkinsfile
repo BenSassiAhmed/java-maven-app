@@ -38,14 +38,22 @@ pipeline {
             }
         }
         
-        stage("build image") {
+        stage("build and push image") {
             steps {
                 script {
                     gv.buildImage()
                 }
             }
         }
-        
+
+        stage("update deployementservice.yml") {
+            steps {
+                script {
+                    echo "Updating deployementservice.yml with the new image tag"
+                    sh "sed -i 's/{{IMAGE_TAG}}/${env.IMAGE_NAME}/g' deployementservice.yml"  
+                }
+            }
+        }
         stage("deploy") {
             steps {
                 script {
