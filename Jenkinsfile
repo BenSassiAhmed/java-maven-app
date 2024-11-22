@@ -45,7 +45,21 @@ pipeline {
                 }
             }
         }
+        stage("build and push image") {
+            steps {
+                script {
+                    def dockercmd= 'docker run -d --name app -p 8080:8080 bensassiahmed/project989:jma-${IMAGE_NAME} '
+                        sshagent(['ec2-server-key']) {
+                            sh "ssh -o StrictHostKeyChecking=no ubuntu@34.228.11.54 ${dockercmd}"
+                        }
+                    }
+                }
+            }
 
+
+
+        
+    /* 
         stage("update deployementservice.yml") {
             steps {
                 script {
@@ -63,7 +77,10 @@ pipeline {
                     sh 'kubectl get all '
                 }
             }
-        }
+        } 
+        */ 
+
+
         
         stage('commit version update') {
             steps {
