@@ -45,7 +45,7 @@ pipeline {
                 }
             }
         }
-        stage("build and push image") {
+        stage("deploy to ec2") {
             steps {
                 script {
                     def dockercmd= 'docker run -d --name app -p 8080:8080 bensassiahmed/project989:jma-${IMAGE_NAME} '
