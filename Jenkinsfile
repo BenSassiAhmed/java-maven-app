@@ -45,6 +45,8 @@ pipeline {
                 }
             }
         }
+
+    /*    
         stage("deploy to ec2") {
             steps {
                 script {
@@ -55,11 +57,11 @@ pipeline {
                     }
                 }
             }
-
+*/
 
 
         
-    /* 
+    
         stage("update deployementservice.yml") {
             steps {
                 script {
@@ -78,8 +80,7 @@ pipeline {
                 }
             }
         } 
-        */ 
-
+        
 
         
         stage('commit version update') {
