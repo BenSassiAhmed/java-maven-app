@@ -9,6 +9,32 @@ pipeline {
     }
     stages {
         
+        stage('Check Committer') {
+            steps {
+                script {
+                    // Check if the build was triggered manually
+                    def isManualBuild = currentBuild.getBuildCauses('hudson.model.Cause$UserIdCause')
+
+                    // Skip the committer check for manual builds
+                    if (!isManualBuild) {
+                        // Get the committer's email or username
+                        def committerEmail = sh(script: 'git log -1 --pretty=format:"%ae"', returnStdout: true).trim()
+                        def committerName = sh(script: 'git log -1 --pretty=format:"%an"', returnStdout: true).trim()
+
+                        // Stop the build if the commit was made by Jenkins
+                        if (committerEmail == "jenkins@example.com" || committerName == "jenkins") {
+                            error "Stopping build because the commit was made by Jenkins."
+                        } else {
+                            echo "Proceeding with the build because the commit was not made by Jenkins."
+                        }
+                    } else {
+                        echo "Build was triggered manually. Skipping committer check."
+                    }
+                }
+            }
+        }
+
+        
         stage('increment version') {
             steps {
                 script {
