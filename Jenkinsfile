@@ -92,8 +92,10 @@ pipeline {
             steps {
                 script {
                     echo "Updating deployementservice.yml with the new image tag"
-                    sh "sed -i 's|bensassiahmed/project989:jma-.*|bensassiahmed/project989:jma-'"${IMAGE_NAME}"'|g' deployementservice.yml"  
-                }
+                   sh """
+                        sed -i 's|bensassiahmed/project989:jma-.*|bensassiahmed/project989:jma-'"${IMAGE_NAME}"'|g' deployementservice.yml
+                    """
+                }    
             }
         }
         stage("deploy") {
