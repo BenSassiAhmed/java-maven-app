@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: bensassiahmed/project989:jma-1.1.12-13
+          image: bensassiahmed/project989:1.1.15-231.1.12-13
           ports:
             - containerPort: 8080
 
