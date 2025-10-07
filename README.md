@@ -1,7 +1,7 @@
 # 🚀 Java Maven App — CI/CD & Kubernetes Deployment
 
 ### 🎓 Final Year / DevOps Practice Project  
-**By [Ahmed Ben Sassi](https://www.linkedin.com/in/ahmed-bensassi)**  
+**By [Ahmed Ben Sassi](https://www.linkedin.com/in/ben-sassi-ahmed-44a5701b0/)**  
 
 ---
 
@@ -67,7 +67,7 @@ It demonstrates **automated building, versioning, and deployment**, showcasing *
 4.  **Access the application:**
     Open your web browser and navigate to `http://localhost:8080`. You will see the welcome page.
 
-## Containerization
+## 🐳 Docker Containerization
 
 The project can be run as a Docker container. The `Dockerfile` uses an `openjdk:8-jre-alpine` base image to create a lightweight and efficient container.
 
@@ -81,7 +81,7 @@ The project can be run as a Docker container. The `Dockerfile` uses an `openjdk:
     docker run -p 8080:8080 java-maven-app
     ```
 
-## Kubernetes Deployment
+## ☸️ Kubernetes Deployment
 
 The `deployementservice.yml` file contains the manifests for deploying the application on Kubernetes.
 
@@ -91,3 +91,31 @@ The `deployementservice.yml` file contains the manifests for deploying the appli
 To deploy to a configured Kubernetes cluster, apply the manifest:
 ```sh
 kubectl apply -f deployementservice.yml
+```
+---
+
+## 🛠️ Tech Stack
+
+| Category | Tools |
+|-----------|-------|
+| 💻 **Programming** | Java 8, Spring Boot |
+| ⚙️ **Build Tool** | Maven |
+| 🐳 **Containerization** | Docker |
+| ⚙️ **CI/CD** | Jenkins |
+| ☸️ **Orchestration** | Kubernetes |
+| 📈 **Monitoring** | Prometheus |
+| 🔐 **Version Control** | GitHub |
+---
+
+## 👨‍💻 Author
+
+**Ahmed Ben Sassi**  
+📍 Teleinformatics Engineering Student  
+💼 DevOps Enthusiast
+📧 [bensassiahmed03@gmail.com](mailto:bensassiahmed989@gmail.com)  
+🔗 [LinkedIn](https://www.linkedin.com/in/ben-sassi-ahmed-44a5701b0/)
+
+---
+
+⭐ *If you found this project helpful, don’t forget to give it a star on GitHub!*
+
