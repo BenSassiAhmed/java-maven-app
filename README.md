@@ -1,38 +1,54 @@
-# Java Maven App
+# 🚀 Java Maven App — CI/CD & Kubernetes Deployment
 
-This repository contains a simple Java Spring Boot web application built with Maven. The project is configured with a complete CI/CD pipeline using Jenkins, Docker, and Kubernetes for automated building, versioning, and deployment.
+### 🎓 Final Year / DevOps Practice Project  
+**By [Ahmed Ben Sassi](https://www.linkedin.com/in/ahmed-bensassi)**  
 
-## Features
+---
 
--   **Spring Boot Application**: A simple web application that serves a static welcome page.
--   **Maven Build**: Uses Maven for dependency management and building the executable JAR file.
--   **Dockerization**: Includes a `Dockerfile` to containerize the application for consistent deployments.
--   **CI/CD Pipeline**: A comprehensive `Jenkinsfile` that automates the entire software delivery process.
--   **Kubernetes Deployment**: A `deployementservice.yml` manifest to deploy and expose the application in a Kubernetes cluster.
+## 🌟 Overview
 
-## CI/CD Pipeline Workflow
+This project contains a **simple Java Spring Boot web application** built with **Maven**, fully **Dockerized**, and deployed on **Kubernetes** with a **complete CI/CD pipeline using Jenkins**.  
 
-The `Jenkinsfile` defines a declarative pipeline that automates the following stages:
+It demonstrates **automated building, versioning, and deployment**, showcasing **DevOps best practices** for Java microservices applications.
 
-1.  **Check Committer**: Prevents CI/CD loops by stopping the build if the last commit was made by the Jenkins user.
-2.  **Increment Version**: Automatically increments the patch version in the `pom.xml` file and creates a unique image tag.
-3.  **Build JAR**: Compiles the Java code and packages the application into an executable `.jar` file using `mvn package`.
-4.  **Build and Push Docker Image**: Builds a Docker image using the `Dockerfile`, tags it with the new version, and pushes it to a Docker Hub repository (`bensassiahmed/project989`).
-5.  **Update Deployment Manifest**: Updates the `deployementservice.yml` with the new Docker image tag.
-6.  **Deploy**: Applies the updated Kubernetes manifest (`deployementservice.yml`) to deploy the new version of the application to a Kubernetes cluster.
-7.  **Commit Version Update**: Commits the version changes in `pom.xml` and the image tag update in `deployementservice.yml` back to the GitHub repository.
+---
 
-## How to Build and Run Locally
+## 🔧 Features
 
-### Prerequisites
+- **Spring Boot Application**: Serves a static welcome page.  
+- **Maven Build**: Dependency management and JAR packaging via Maven.  
+- **Dockerization**: Containerizes the application using a lightweight `openjdk:8-jre-alpine` image.  
+- **CI/CD Pipeline**: Declarative `Jenkinsfile` automates build, versioning, Docker push, and deployment.  
+- **Kubernetes Deployment**: `deployementservice.yml` manages deployment and exposes the app in the cluster.
 
--   Java 8 or later
--   Maven
+---
 
-### Steps
+## 🚀 CI/CD Pipeline Workflow
 
-1.  **Clone the repository:**
-    ```sh
+1. 👨‍💻 **Check Committer**: Prevents CI/CD loops if the last commit was made by Jenkins.  
+2. 🔢 **Increment Version**: Automatically updates the patch version in `pom.xml` and generates a new Docker image tag.  
+3. 🛠️ **Build JAR**: Compiles Java code and packages it into an executable `.jar` using `mvn package`.  
+4. 🐳 **Build & Push Docker Image**: Builds a Docker image with the new tag and pushes it to Docker Hub (`bensassiahmed/project989`).  
+5. 📄 **Update Deployment Manifest**: Replaces the Docker image tag in `deployementservice.yml`.  
+6. 🚀 **Deploy to Kubernetes**: Applies the updated manifest to deploy the new version.  
+7. 💾 **Commit Version Updates**: Commits the updated `pom.xml` and manifest back to GitHub.
+
+---
+
+## ⚙️ Prerequisites
+
+- Java 8 or later  
+- Maven  
+- Docker (for containerization)  
+- Kubernetes cluster configured with `kubectl`  
+- Jenkins (optional for full CI/CD pipeline)
+
+---
+
+## 🏗️ Build & Run Locally
+
+1. **Clone the repository:**
+    ```bash
     git clone https://github.com/BenSassiAhmed/java-maven-app.git
     cd java-maven-app
     ```
