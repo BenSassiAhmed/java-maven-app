@@ -1,5 +1,4 @@
 # Java Maven App
-[![Ask DeepWiki](https://devin.ai/assets/askdeepwiki.png)](https://deepwiki.com/BenSassiAhmed/java-maven-app)
 
 This repository contains a simple Java Spring Boot web application built with Maven. The project is configured with a complete CI/CD pipeline using Jenkins, Docker, and Kubernetes for automated building, versioning, and deployment.
 
