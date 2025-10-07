@@ -111,8 +111,6 @@ kubectl apply -f deployementservice.yml
 📍 Teleinformatics Engineering Student  
 💼 DevOps Enthusiast
 📧 [bensassiahmed03@gmail.com](mailto:bensassiahmed989@gmail.com)  
-<img width="480" height="480" alt="image" src="https://github.com/user-attachments/assets/d1d60d00-a152-4910-ab93-6fbc9fe12ac8" />
- ![Uploading image.png…]()
 [LinkedIn](https://www.linkedin.com/in/ben-sassi-ahmed-44a5701b0/)
 
 ---
