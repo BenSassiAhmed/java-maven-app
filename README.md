@@ -1,6 +1,4 @@
-# 🚀 Java Maven App — CI/CD & Kubernetes Deployment
-
-### 🎓 Final Year / DevOps Practice Project  
+# 🚀 Java Maven App
 **By [Ahmed Ben Sassi](https://www.linkedin.com/in/ben-sassi-ahmed-44a5701b0/)**  
 
 ---
